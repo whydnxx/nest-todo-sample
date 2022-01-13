@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleAsyncOptions } from '@nestjs/typeorm';
+import { TodoModule } from 'modules/todo/todo.module';
 import { AuthModule } from './../auth';
 import { CommonModule } from './../common';
 import { ConfigModule, ConfigService } from './../config';
@@ -27,6 +28,7 @@ import { AppService } from './app.service';
     ConfigModule,
     AuthModule,
     CommonModule,
+    TodoModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -17,7 +17,6 @@ export class AuthService {
     return {
       expiresIn: this.configService.get('JWT_EXPIRATION_TIME'),
       accessToken: this.jwtService.sign({ id: user.id }),
-      user,
     };
   }
 
